@@ -1,0 +1,132 @@
+/* 
+DEVELOPER BY: FRANCISCO GARCIA
+DATE: 07-03-2021
+*/
+/*
+VARIABLES
+*/
+:root{
+    --c-primary: #233952;
+    --c-secundary: #2e547f;
+    --c-terciary: #275439;
+    --c-cuaternary: #c7193f;
+    --t-primary: 'Poppins', sans-serif;
+    --t-secundary: #EBEBEB;
+}
+/*
+GENERAL
+*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+/* 
+MENU
+*/
+header{
+    background: var(--c-primary);
+    height: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a{
+    display: block;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    font-family: var(--t-primary);
+    cursor: pointer;
+}
+/* 
+FORMS ITEMS
+*/
+.target{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+.target-success {
+    padding: 10px;
+    border: 1px solid var(--t-secundary);
+    margin-bottom: 1%;
+    background-color: var(--c-terciary);
+    color: var(--t-secundary);
+}
+.target-error {
+    padding: 10px;
+    border: 1px solid var(--t-secundary);
+    margin-bottom: 1%;
+    background-color: var(--c-cuaternary);
+    color: var(--t-secundary);
+}
+.target_content{
+    border: 1px solid var(--t-secundary);
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.target-content-inputs{
+    margin-bottom: 5%;
+    text-align: center;
+}
+.target-content-inputs label{
+    display: block;
+    padding-bottom: 2%;
+    color: var(--t-secundary);
+    font-family: var(--t-primary);
+}
+
+.target-content-inputs input{
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    font-family: var(--t-primary);
+    color: var(--t-secundary);
+    width: 100%;
+}
+
+.target-content-inputs button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--c-secundary);
+    color: white;
+    margin-top: 5%;
+    font-family: var(--t-primary);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.target-content-inputs button:hover{
+    background-color: #1e3e6d;
+}
+/* 
+TOOLS
+*/
+.text-center{
+    text-align: center;
+}
+.margin-top-5{
+    margin-top: 5%;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}

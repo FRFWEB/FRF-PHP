@@ -1,9 +1,9 @@
 <?php
 
 //GET COENXION
-$conexion = generateConexion('localhost',null,'demo','root','');
+//$conexion = generateConexion('localhost',null,'demo','root','');
 //GET CRUD
-$result = generateCrud("SELECT * FROM clientes WHERE id_cliente = 1",$conexion,'read','');
+//$result = generateCrud("SELECT * FROM clientes WHERE id_cliente = 1",$conexion,'read','');
 
 //GENERATE CONEXION
 function generateConexion($host, $port, $db, $root, $pass){
