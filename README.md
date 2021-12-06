@@ -53,3 +53,21 @@ function generatePassword($get_op_letersLower, $get_op_numbers, $get_op_letterUp
 }
 ?>
 ```
+### MVC
+
+For Create Project in MVC is necessary:
+
+- Separe proyect in two folders App and Public
+-----------
+App       +
+-----------
+- Create folder and archive config.php, define database, url root, app root, and sitename index
+- Create folder Libraries and create files Core, Controller and Database .php
+- Create file require.php where call config.php and libraries for example core.php, controller.php etc...
+- Create Model for Controller, example Controller Users, model User and prepare all querys for user
+- Create folder views create index.php and separate head, footer, content etc..
+-----------
+Public    +
+-----------
+- Create folders assets for all document public example style.css, javascript, images
+- Create .htaccess with rewrite for redirect folders
