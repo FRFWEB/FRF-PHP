@@ -13,9 +13,10 @@ use Legierski\AES\AES;
 $aes = new AES;
 
 function sanatize($data_value){
-    $sanitize_entities = htmlentities($data_value,ENT_QUOTES | ENT_IGNORE, 'UTF-8');
+    $sanitize_entities = htmlentities($data_value,ENT_QUOTES | ENT_IGNORE | ENT_COMPAT, 'UTF-8');
     $sanitize_special_entities = htmlspecialchars($sanitize_entities,ENT_QUOTES | ENT_IGNORE, 'UTF-8');
-    return filter_var($sanitize_special_entities, FILTER_SANITIZE_SPECIAL_CHARS);
+    $sanitize_others_chars = preg_replace('/\(|\)|\;/','',$sanitize_special_entities);
+    return filter_var($sanitize_others_chars, FILTER_SANITIZE_SPECIAL_CHARS, FILTER_FLAG_ENCODE_HIGH);
 }
 
 function encryptData($data_encrypt,$method_encrypt,$key_encrypt){
