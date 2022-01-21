@@ -72,3 +72,23 @@ Public    +
 -----------
 - Create folders assets for all document public example style.css, javascript, images
 - Create .htaccess with rewrite for redirect folders
+
+## php-node
+
+before install php-node of npm in ubuntu configure addreess folder bin with version php to:
+
+Example :
+
+- /usr/bin/php7.2
+- /usr/bin/php7.3
+
+In windows configure where this your php.exe file
+
+Example with xampp:
+
+- C:\\xampp\\php\\php.exe
+
+Line code complete:
+
+- const phpnode = require('php-node')({bin:"C:\\xampp\\php\\php.exe"});
+- const phpnode = require('php-node')({bin:"/usr/bin/php7.2"});
