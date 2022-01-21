@@ -92,3 +92,16 @@ Line code complete:
 
 - const phpnode = require('php-node')({bin:"C:\\xampp\\php\\php.exe"});
 - const phpnode = require('php-node')({bin:"/usr/bin/php7.2"});
+
+```
+const phpnode = require('php-node')({bin:"C:\\xampp\\php\\php.exe"});
+app.engine('php', phpnode);
+app.set('view engine', 'php');
+```
+
+```
+const phpnode = require('php-node')({bin:"/usr/bin/php7.2"});
+app.engine('php', phpnode);
+app.set('view engine', 'php');
+```
+
