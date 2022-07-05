@@ -1,5 +1,6 @@
 # FRFPHP
 PHP CODE FOR ALL PROJYECT O DOCUMENTS
+
 ### INSTALL PHP IN UBUNTU
 
 example php7.3
@@ -8,6 +9,32 @@ example php7.3
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install -y php7.3
+```
+### FIX PHP IN CASE FILES DONWLAD
+
+remove php version example php7.3
+
+```
+sudo apt-get purge php7.*
+sudo apt-get autoclean
+sudo apt-get autoremove
+```
+next install new version of php and create file .htaccess
+
+```
+<Files *.js>
+    ForceType application/x-httpd-php
+    Header set Content-Type "application/javascript"
+</Files>
+<Files *.css>
+    ForceType application/x-httpd-php
+    Header set Content-Type "text/css"
+</Files>
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
 ```
 
 ### MY KIT FOR DEV
