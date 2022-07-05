@@ -22,16 +22,25 @@ sudo apt-get autoremove
 next install new version of php and create file .htaccess
 
 ```
+# JAVASCRIPT FILES
 <Files *.js>
     ForceType application/x-httpd-php
     Header set Content-Type "application/javascript"
 </Files>
+
+# JSON FILES
+<Files *.json>
+    ForceType application/x-httpd-php
+    Header set Content-Type "application/json"
+</Files>
+
+# CSS FILES
 <Files *.css>
     ForceType application/x-httpd-php
     Header set Content-Type "text/css"
 </Files>
 
-
+#CLEAN EXTENSION .PHP
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
