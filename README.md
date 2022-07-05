@@ -1,5 +1,14 @@
 # FRFPHP
 PHP CODE FOR ALL PROJYECT O DOCUMENTS
+### INSTALL PHP IN UBUNTU
+
+example php7.3
+
+```
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install -y php7.3
+```
 
 ### MY KIT FOR DEV
 
@@ -104,4 +113,5 @@ const phpnode = require('php-node')({bin:"/usr/bin/php7.2"});
 app.engine('php', phpnode);
 app.set('view engine', 'php');
 ```
+
 
