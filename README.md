@@ -9,6 +9,10 @@ example php7.3
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install -y php7.3
+sudo apt-get install php7.0-curl
+
+//Enable curl function
+phpenmod curl
 ```
 ### FIX PHP IN CASE FILES DONWLAD
 
