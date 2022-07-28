@@ -3,7 +3,7 @@ PHP CODE FOR ALL PROJYECT O DOCUMENTS
 
 ### INSTALL PHP IN UBUNTU
 
-example php7.3
+example php7.4
 
 ```
 sudo add-apt-repository ppa:ondrej/php
@@ -14,6 +14,13 @@ sudo apt-get install -y php7.4-cli php7.4-json php7.4-common php7.4-mysql php7.4
 //Enable curl function
 phpenmod curl
 ```
+
+### INSTALL SSH2_CONNECT
+
+```
+sudo apt-get install -y php-ssh2 libssh2-1
+```
+
 ### FIX PHP IN CASE FILES DONWLAD
 
 remove php version example php7.3
