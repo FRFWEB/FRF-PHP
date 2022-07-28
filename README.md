@@ -20,6 +20,34 @@ phpenmod curl
 ```
 sudo apt-get install -y php-ssh2 libssh2-1
 ```
+code example
+```
+<?php
+$host = "demo.net";
+$user =  "root";
+$password = "fixmen";
+$port = 5500;
+$get_config_file = '/etc/httpd/conf/httpd.conf';
+
+//CREATE CONECCTION
+$connection = ssh2_connect($host, $port);
+ssh2_auth_password($connection, $user, $password);
+//ACTIVE SFTP
+$sftp = ssh2_sftp($connection);
+
+//DOWNLOAD HTTPD.CONF OF SERVER
+$stream = fopen("ssh2.sftp://".$sftp.$get_config_file, 'r');
+$contents = stream_get_contents($stream);
+echo $contents;
+
+// EXCUTE COMAND IN THE SERVER
+$stream = ssh2_exec($connection, 'pwd; ls;');
+stream_set_blocking($stream, true);
+$stream_out = ssh2_fetch_stream($stream, SSH2_STREAM_STDIO);
+echo stream_get_contents($stream_out);
+
+?>
+```
 
 ### FIX PHP IN CASE FILES DONWLAD
 
