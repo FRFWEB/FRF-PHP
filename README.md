@@ -49,6 +49,29 @@ echo stream_get_contents($stream_out);
 ?>
 ```
 
+### GET ERROS OF FILE PHP
+
+```
+error_reporting(E_ALL);
+var_dump(error_get_last());
+```
+
+example
+```
+<?php
+//get errors
+error_reporting(E_ALL);
+$get_config_file = '/etc/httpd/conf/httpd.conf';
+$file = fopen($get_config_file, 'w');
+//show error
+var_dump(error_get_last());
+
+$addText = "hello";
+fwrite(file, $addText);
+fclose($createTmpFile);
+?>
+```
+
 ### FIX PHP IN CASE FILES DONWLAD
 
 remove php version example php7.3
