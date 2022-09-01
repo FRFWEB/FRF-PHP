@@ -17,9 +17,7 @@ phpenmod curl
 ### PATH JOIN IN PHP
 
 ```
-
 join(DIRECTORY_SEPARATOR,array(realpath(__DIR__ . '/..'),'/vendor/autoload.php')); 
-
 ```
 
 ### INSTALL SSH2_CONNECT
