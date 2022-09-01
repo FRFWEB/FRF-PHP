@@ -113,16 +113,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 ```
 
-### MY KIT FOR DEV
+### SANITIZATE DATA
 
-[Legierski - AES](https://github.com/legierski/AES)
 
 ```
-<?php
-
-require __DIR__ . '/vendor/autoload.php';
-use Legierski\AES\AES;
-$aes = new AES;
 
 function sanatize($data_value){
     $sanitize_entities = htmlentities($data_value,ENT_QUOTES | ENT_IGNORE | ENT_COMPAT, 'UTF-8');
@@ -131,6 +125,11 @@ function sanatize($data_value){
     return filter_var($sanitize_others_chars, FILTER_SANITIZE_SPECIAL_CHARS, FILTER_FLAG_ENCODE_HIGH);
 }
 
+```
+
+### ENCRYPT AND DECRYPT DATA
+
+```
 function encryptData($data_encrypt,$method_encrypt,$key_encrypt){
     return  openssl_encrypt($data_encrypt,$method_encrypt,$key_encrypt);
 }
@@ -139,6 +138,18 @@ function decryptData($data_encrypt,$method_encrypt,$key_encrypt){
     return  openssl_decrypt($data_encrypt,$method_encrypt,$key_encrypt);
 }
 
+//EXAMPLE
+$encrypt_method = "AES-256-OFB";
+$secret_key = 'LOLA-1N-ZS';
+$secret_iv = 'LOL4-1N-ZS';
+$key = hash('sha256', $secret_key);
+$iv = substr(hash('sha256', $secret_iv), 0, 16);
+encryptData("demo",$encrypt_method, $key, 0, $iv);
+```
+
+### GERATOR PASSWORD
+
+```
 function generatePassword($get_op_letersLower, $get_op_numbers, $get_op_letterUppers,$get_op_specialCharacters, $get_op_logintude){
  
     $opc_letters_lowers = $get_op_letersLower; 
@@ -166,6 +177,7 @@ function generatePassword($get_op_letersLower, $get_op_numbers, $get_op_letterUp
 }
 ?>
 ```
+
 ### MVC
 
 For Create Project in MVC is necessary:
