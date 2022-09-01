@@ -14,6 +14,13 @@ sudo apt-get install -y php7.4-cli php7.4-json php7.4-common php7.4-mysql php7.4
 //Enable curl function
 phpenmod curl
 ```
+### PATH JOIN IN PHP
+
+```
+
+join(DIRECTORY_SEPARATOR,array(realpath(__DIR__ . '/..'),'/vendor/autoload.php')); 
+
+```
 
 ### INSTALL SSH2_CONNECT
 
