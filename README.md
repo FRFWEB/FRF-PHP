@@ -57,6 +57,8 @@ echo stream_get_contents($stream_out);
 ### GET ERROS OF FILE PHP
 
 ```
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 var_dump(error_get_last());
 ```
