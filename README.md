@@ -115,6 +115,47 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 ```
 
+## HTACCESS MVC CONFIG 
+
+FILE 1
+
+```
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^$ /public/ [L]
+  RewriteRule (.*) /public/$1 [L]
+</IfModule>
+
+RewriteRule ^sitemap\.xml$ sitemap [L]
+RewriteRule ^robots\.txt$ sitemap [L]
+```
+FILE 2
+
+```
+<IfModule mod_rewrite.c>
+  Options -Multiviews
+  RewriteEngine On
+  RewriteBase /public
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+<Files *.js>
+    ForceType application/x-httpd-php
+    Header set Content-Type "application/javascript"
+</Files>
+<Files *.css>
+    ForceType application/x-httpd-php
+    Header set Content-Type "text/css"
+</Files>
+<Files *.json>
+    ForceType application/x-httpd-php
+    Header set Content-Type "application/json"
+</Files>
+
+```
+
 ### SANITIZATE DATA
 
 
