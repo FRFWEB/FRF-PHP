@@ -126,6 +126,14 @@ FILE 1
   RewriteRule (.*) /public/$1 [L]
 </IfModule>
 
+## enabled headers
+
+<IfModule mod_headers.c>
+  <filesMatch ".(css|jpg|jpeg|png|js|ico|ttf|webp|woff2|webm)$">
+  Header set Cache-Control "max-age=604800, public"
+  </filesMatch>
+</IfModule>
+
 RewriteRule ^sitemap\.xml$ sitemap [L]
 RewriteRule ^robots\.txt$ sitemap [L]
 ```
