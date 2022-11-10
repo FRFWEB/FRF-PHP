@@ -54,6 +54,17 @@ echo stream_get_contents($stream_out);
 ?>
 ```
 
+### GET DATA OF USER IP, ADDRESS ETC..
+
+```
+$ip = getenv('REMOTE_ADDR');
+$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+
+echo $ip;
+echo $details;
+echo $_SERVER['HTTP_USER_AGENT'];
+```
+
 ### GET ERROS OF FILE PHP
 
 ```
