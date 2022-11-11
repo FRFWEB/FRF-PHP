@@ -175,6 +175,14 @@ FILE 2
 
 ```
 
+### INTERESTING
+
+convert array to UpperCase First Letter
+
+```
+array_map('ucfirst', $array);
+```
+
 ### SANITIZATE DATA
 
 
