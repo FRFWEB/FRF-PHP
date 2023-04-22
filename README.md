@@ -299,4 +299,15 @@ app.engine('php', phpnode);
 app.set('view engine', 'php');
 ```
 
+## LARAVEL
+
+### Migration
+
+create table for database
+
+```
+php artisan make:migration vehicules --create=vehicules
+```
+
+
 
