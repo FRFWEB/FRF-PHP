@@ -2,7 +2,7 @@
 PHP CODE FOR ALL PROJYECT O DOCUMENTS
 
 ### OBTENER PRECIO DEL DOLARTODAY VENEZUELA
-
+```
 $client = new Client(HttpClient::create(['timeout' => 60]));
 $crawler = $client->request('GET', 'https://monitordolarvenezuela.com/');
 $getCurrentExchanges = $crawler->filter('div#promedios > div > div > div > div')->each(function ($node, $i) {
@@ -18,7 +18,7 @@ $getCurrentExchanges = $crawler->filter('div#promedios > div > div > div > div')
 unset($getCurrentExchanges[0], $getCurrentExchanges[8], $getCurrentExchanges[9]);
 $currentExchanges = array_values($getCurrentExchanges);
 var_dump($currentExchanges);
-
+```
 
 ### INSTALL PHP IN UBUNTU
 
