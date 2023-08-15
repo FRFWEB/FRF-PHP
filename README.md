@@ -6,18 +6,17 @@ PHP CODE FOR ALL PROJYECT O DOCUMENTS
 $client = new Client(HttpClient::create(['timeout' => 60]));
 $crawler = $client->request('GET', 'https://monitordolarvenezuela.com/');
 $getCurrentExchanges = $crawler->filter('div#promedios > div > div > div > div')->each(function ($node, $i) {
-    $prepareObj = [];
-    array_push($prepareObj, (object)[
+    $prepareObj = (object) array(
         'id' => $i,
         'bank' => $node->filter('.title-prome')->text(),
         'current_price' => explode(' ', $node->filter('p')->text())[2],
         'updated' => $node->filter('small')->last()->text()
-    ]);
+    );
     return $prepareObj;
 });
 unset($getCurrentExchanges[0], $getCurrentExchanges[8], $getCurrentExchanges[9]);
-$currentExchanges = array_values($getCurrentExchanges);
-var_dump($currentExchanges);
+$currentExchanges = json_encode($getCurrentExchanges);
+echo $currentExchanges;
 ```
 
 ### INSTALL PHP IN UBUNTU
