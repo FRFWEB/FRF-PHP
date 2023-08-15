@@ -1,8 +1,18 @@
 # FRFPHP
 PHP CODE FOR ALL PROJYECT O DOCUMENTS
 
-### OBTENER PRECIO DEL DOLARTODAY VENEZUELA
+### Get Venezuelan currency exchange
+
+install
 ```
+composer require fabpot/goutte 
+```
+in your file .php
+
+```
+use Goutte\Client;
+use Symfony\Component\HttpClient\HttpClient;
+
 $client = new Client(HttpClient::create(['timeout' => 60]));
 $crawler = $client->request('GET', 'https://monitordolarvenezuela.com/');
 $getCurrentExchanges = $crawler->filter('div#promedios > div > div > div > div')->each(function ($node, $i) {
