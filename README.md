@@ -13,7 +13,7 @@ domail.com.	14400	MX	Priority: 0
 mail.domain.com. 14400	A	1.1.1.1
 ```
 
-- excute php artisan cache:clear and php artisan config:cache
+- execute php artisan cache:clear and php artisan config:cache for save new config of .env file
 
 ### Get Venezuelan currency exchange
 
