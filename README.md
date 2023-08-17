@@ -1,6 +1,20 @@
 # FRFPHP
 PHP CODE FOR ALL PROJYECT O DOCUMENTS
 
+
+### Laravel Mail Not Working
+
+- Check mail server of domail, check if have register A and MX example
+
+```
+domail.com.	14400	MX	Priority: 0
+                        Destination: mail.domain.com
+                        
+mail.domain.com. 14400	A	1.1.1.1
+```
+
+- excute php artisan cache:clear and php artisan config:cache
+
 ### Get Venezuelan currency exchange
 
 install
