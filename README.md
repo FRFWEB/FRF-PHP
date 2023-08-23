@@ -346,10 +346,16 @@ app.set('view engine', 'php');
 
 ### Migration
 
-create table for database
+Create table for database
 
 ```
 php artisan make:migration vehicules --create=vehicules
+```
+
+Migrate especific file for database
+
+```
+ php artisan migrate:refresh --path=/database/migrations/demo.php
 ```
 
 
