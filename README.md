@@ -358,5 +358,10 @@ Migrate especific file for database
  php artisan migrate:refresh --path=/database/migrations/demo.php
 ```
 
+### EVITAR IMAGE CACHEANDA EN PHP O LARAVEL
+
+add ?v= and generate random valur for the image
+
+``` <img src="example.webp?v='.time()" /> ```
 
 
