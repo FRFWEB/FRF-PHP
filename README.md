@@ -346,10 +346,10 @@ app.set('view engine', 'php');
 
 ### PERONSAL TIPS
 
-- Generate Request (Validation) for forms of the app ```php artisan make:request RegisterRequest``
+- Generate Request (Validation) for forms of the app ```php artisan make:request RegisterRequest```
 - The function Mail is native in laravel, use ```php artisan make:mail Welcome``` for create templante and call function ```Mail::to(demo@exaple.com)->send(new Welcome())``` in your controller
 - Use laravel eloquent in all
-- Create api in laravel use, method resources in web.php example ```Route::resource('/post', PostController::class)``
+- Create api in laravel use, method resources in web.php example ```Route::resource('/post', PostController::class)```
 
 ### Migration
 
