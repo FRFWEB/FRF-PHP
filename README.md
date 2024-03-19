@@ -371,4 +371,14 @@ add ?v= and generate random valur for the image
 
 ``` <img src="example.webp?v='.time()" /> ```
 
+### DOMPDF
+
+add image in svg format 
+
+- Create or save you image in svg and add this code
+
+```
+<img src="data:image/svg+xml;base64,<?php echo base64_encode(file_get_contents(base_path('public/images/logo.svg'))); ?>" width="120">
+```
+
 
