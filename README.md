@@ -380,6 +380,12 @@ add ?v= and generate random valur for the image
 - Remove dir storage in the dir public
 - Create new storage Link
 
+### FORCE INSTALL IN COMPOSER
+
+``` 
+composer require evilfreelancer/routeros-api-php --ignore-platform-reqs
+```
+
 ### DOMPDF
 
 add image in svg format 
