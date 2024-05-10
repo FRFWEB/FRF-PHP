@@ -371,6 +371,15 @@ add ?v= and generate random valur for the image
 
 ``` <img src="example.webp?v='.time()" /> ```
 
+### STORAGE LINK
+
+``` php artisan storage:link ```
+
+### REFERESH AND RE-CREATE STORAGE LINK
+
+- Remove dir storage in the dir public
+- Create new storage Link
+
 ### DOMPDF
 
 add image in svg format 
